@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Dibujar formas -->
+    <svg width="2000" height="2000">
+      <!-- CIRCLE -->
+      <circle
+        cx="100"
+        cy="100"
+        r="50"
+        fill="red"
+        stroke="black"
+        stroke-width="3"
+      />
+
+      <!-- Cuadrado -->
+      <rect width="300" height="100" x="100" y="200" fill="green" />
+
+      <!-- Linea -->
+      <line
+        x1="10"
+        y1="10"
+        x2="300"
+        y2="200"
+        style="stroke: black; stroke-width: 20; stroke-linecap: square"
+      />
+
+      <!-- Polyline -->
+      <polyline
+        style="
+          stroke: orange;
+          stroke-width: 12;
+          stroke-linejoin: miter;
+          fill: none;
+        "
+        points="200 200, 250 250, 300 200"
+      />
+
+      <!-- Elipce -->
+      <ellipse cx="400" cy="400" rx="100" ry="50" fill="blue" />
+      <polygon
+        points="300 300, 400 400, 500 0"
+        style="fill: red; stroke: black"
+      />
+
+      <rect width="300" height="100" x="100" y="500" fill="grey">
+        <!-- Animacion -->
+        <animate
+          attributeName="x"
+          from="0"
+          to="300"
+          dur="60s"
+          fill="freeze"
+          repeatCount="indefinite"
+        />
+      </rect>
+
+      <!-- Cofigurar una forma -->
+      <path d="M 0 0, L200 200, L200 0 Z" style="stroke: black; fill: none" />
+
+      <!-- Filtros -->
+      <defs>
+        <filter id="our-effect-id">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+        </filter>
+      </defs>
+      <rect
+        width="300"
+        height="100"
+        x="100"
+        y="700"
+        fill="red"
+        filter="url(#our-effect-id)"
+      />
+    </svg>
+  </body>
+</html>

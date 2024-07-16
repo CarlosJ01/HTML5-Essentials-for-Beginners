@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Add video -->
+    <video
+      id="movie1"
+      width="500"
+      height="500"
+      controls
+      poster="arrow.png"
+      autoplay
+      loop
+      muted
+    >
+      <source src="video.mp4" />
+      <!-- <source src="video.ogv" /> Poner el mismo video en diferentes formatos -->
+      <track
+        src="subtitles_en.vtt"
+        kind="captions"
+        label="captions"
+        srclang="en"
+        default
+      />
+      <!-- Varios subtitulos -->
+      <track
+        src="subtitles_en.vtt"
+        kind="captions"
+        label="captions-esp"
+        srclang="esp"
+      />
+      Your browser doesn't support HTML5
+    </video>
+
+    <!-- Add Audio -->
+    <audio id="audio" controls>
+      <source src="audio.mp3" />
+      <source src="audio.ogg" />
+      <source src="audio.wav" />
+    </audio>
+  </body>
+</html>
